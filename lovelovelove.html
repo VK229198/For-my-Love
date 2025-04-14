@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #ffd6e0, #e0bbff);
+      color: #4a4a4a;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #d63384;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff0f6;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .letter {
+      background: #fffaf0;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: 'Pacifico', cursive;
+      font-size: 1.2rem;
+    }
+
+    .bucket-list {
+      background: #f3e5f5;
+      border-radius: 15px;
+      padding: 20px;
+      list-style: none;
+    }
+
+    .bucket-list li::before {
+      content: "\2764 ";
+      color: #ff69b4;
+      margin-right: 10px;
+    }
+
+    #timeline {
+      padding: 60px 20px;
+      background: #fff0f6;
+      text-align: center;
+    }
+
+    .timeline-map {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .timeline-step {
+      width: 100%;
+      position: relative;
+      padding: 60px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .timeline-step::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: repeating-linear-gradient(to bottom, #d63384, #d63384 10px, transparent 10px, transparent 20px);
+    }
+
+    .timeline-label {
+      position: relative;
+      z-index: 1;
+      font-weight: bold;
+      color: #b30059;
+      font-size: 1.2rem;
+      background: #fff0f6;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    .timeline-images {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .left-images {
+      left: 5%;
+    }
+
+    .right-images {
+      right: 5%;
+    }
+
+    .timeline-images img {
+      width: 120px;
+      height: 90px;
+      border-radius: 8px;
+      border: 2px solid #ffafd2;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .to-be-continued {
+      font-style: italic;
+      color: #999;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#moments">Fav Moments</a>
+    <a href="#loveletter">My Love for You</a>
+    <a href="#bucketlist">Our To-Do List</a>
+    <a href="#timeline">Timeline</a>
+  </nav>
+
+  <header id="home">
+    <h1>For My Love 💕</h1>
+    <p>This is a little corner of the internet just to show how much I love you.</p>
+  </header>
+
+  <section id="moments">
+    <h2>Our Favorite Moments</h2>
+    <div class="gallery">
+      <figure>
+      <img src="your-photo1.jpg" alt="Moment 2">
+      <figcaption>I love you</figcaption>
+    </figure>
+    <figure>
+      <img src="your-photo1.jpg" alt="Moment 3">
+      <figcaption>I love you</figcaption>
+    </figure>
+    <figure>
+      <img src="your-photo1.jpg" alt="Moment 4">
+      <figcaption>I love you</figcaption>
+    </figure>
+    <figure>
+      <img src="your-photo1.jpg" alt="Moment 5">
+      <figcaption>I love you</figcaption>
+    </figure>
+    
+  
+    </div>
+  </section>
+
+  <section id="loveletter">
+    <h2>My Love for You</h2>
+    <div class="letter">
+      <p>[Your heartfelt letter will go here]</p>
+    </div>
+  </section>
+
+  <section id="bucketlist">
+    <h2>Things I Want Us to Do</h2>
+    <ul class="bucket-list">
+      <li>Go stargazing together</li>
+      <li>Travel to Japan</li>
+      <li>Adopt a pet</li>
+    </ul>
+  </section>
+
+  <section id="timeline">
+    <h2>Our Journey Together 🗺️💗</h2>
+    <div class="timeline-map">
+      <div class="timeline-step">
+        <div class="timeline-images left-images">
+          <img src="month0.jpg" alt="Month 0">
+        </div>
+        <div class="timeline-label">Month 0 - The Beginning</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-images right-images">
+          <img src="month1a.jpg" alt="Month 1">
+          <img src="month1b.jpg" alt="Month 1">
+        </div>
+        <div class="timeline-label">Month 1</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-images left-images">
+          <img src="month2.jpg" alt="Month 2">
+        </div>
+        <div class="timeline-label">Month 2</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-images right-images">
+          <img src="month3.jpg" alt="Month 3">
+        </div>
+        <div class="timeline-label">Month 3</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-label to-be-continued">To be continued...</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
