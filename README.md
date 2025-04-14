@@ -1,4 +1,4 @@
-# For My Love 💕 - A Special Webpage for My Loved One
+# For My Love 💗 - A Special Webpage for My Loved One
 
 This is a heartfelt project created to express love and memories through a personalized webpage. It features a timeline of moments together, a collection of favorite photos, a love letter, and a bucket list of future adventures. It's designed to be a surprise for someone special, crafted with love and care.
 
