@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For My Love</title>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="icon" href="fav.png" type="image">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
   <style>
     * {
@@ -15,8 +20,9 @@
 
     body {
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to bottom right, #ffd6e0, #e0bbff);
+      background: linear-gradient(to top right, #ffddb1, #ff9e9e, #e78ebf);
       color: #4a4a4a;
+      position: relative;
     }
 
     header {
@@ -30,14 +36,16 @@
 
     header h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 2.5rem;
-      color: #d63384;
+      font-size: 3rem;
+      color: #f44ea1;
+      font-weight: normal;
+  
     }
 
     nav {
       position: sticky;
       top: 0;
-      background: #fff0f6;
+      background:linear-gradient(to right,#ffece0, #fecde1);
       padding: 10px 0;
       display: flex;
       justify-content: center;
@@ -59,15 +67,34 @@
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    .gallery figure {
+      position: relative;
+      margin: 0;
+      transform: rotate(calc(var(--rotate, 0deg)));
+      transition: transform 0.3s ease;
     }
 
     .gallery img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 6px solid white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .gallery figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #b30059;
+      margin-top: 5px;
     }
 
     .letter {
@@ -77,10 +104,11 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       font-family: 'Pacifico', cursive;
       font-size: 1.2rem;
+       color: #e78ebf;
     }
 
     .bucket-list {
-      background: #f3e5f5;
+      background:linear-gradient(to top right, #f9c39a, #f6a5b8);
       border-radius: 15px;
       padding: 20px;
       list-style: none;
@@ -94,10 +122,12 @@
 
     #timeline {
       padding: 60px 20px;
-      background: #fff0f6;
+      background:linear-gradient(to right, #facfae,#ff9e9e);
       text-align: center;
     }
 
+  
+  
     .timeline-map {
       display: flex;
       flex-direction: column;
@@ -154,8 +184,8 @@
     }
 
     .timeline-images img {
-      width: 120px;
-      height: 90px;
+      width: 250px;
+      height: 150px;
       border-radius: 8px;
       border: 2px solid #ffafd2;
       object-fit: cover;
@@ -167,9 +197,31 @@
       color: #999;
       margin-top: 30px;
     }
+    .side-vine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px; /* adjust width based on how big you want it */
+  background-repeat: repeat-y;
+  background-size: contain; /* or 'cover' depending on your preference */
+  z-index: 1; /* Keep it behind your content */
+  pointer-events: none; /* So it doesn't block any clicking */
+}
+
+.side-vine.left {
+  left: 0;
+  background-image: url('wow.png');
+}
+
+.side-vine.right {
+  right: 0;
+  background-image: url('wow.png');
+}
   </style>
 </head>
 <body>
+  <div class="side-vine left"></div>
+  <div class="side-vine right"></div>
   <nav>
     <a href="#home">Home</a>
     <a href="#moments">Fav Moments</a>
@@ -179,49 +231,154 @@
   </nav>
 
   <header id="home">
-    <h1>For My Love 💕</h1>
-    <p>This is a little corner of the internet just to show how much I love you.</p>
+    <h1>💗For My Love💗</h1>
   </header>
 
   <section id="moments">
     <h2>Our Favorite Moments</h2>
     <div class="gallery">
-      <figure>
-      <img src="your-photo1.jpg" alt="Moment 2">
-      <figcaption>I love you</figcaption>
-    </figure>
-    <figure>
-      <img src="your-photo1.jpg" alt="Moment 3">
-      <figcaption>I love you</figcaption>
-    </figure>
-    <figure>
-      <img src="your-photo1.jpg" alt="Moment 4">
-      <figcaption>I love you</figcaption>
-    </figure>
-    <figure>
-      <img src="your-photo1.jpg" alt="Moment 5">
-      <figcaption>I love you</figcaption>
-    </figure>
-    
-  
+      <figure style="--rotate: 5deg;">
+        <img src="14.jpg" alt="Moment 14">
+        <figcaption>First Time my House</figcaption>
+      </figure>
+      <figure style="--rotate: -6deg;">
+        <img src="3.jpg" alt="Moment 3">
+        <figcaption>Love the Earring</figcaption>
+      </figure>
+      <figure style="--rotate: 4deg;">
+        <img src="10.jpg" alt="Moment 10">
+        <figcaption>Had to add Popeye's</figcaption>
+      </figure>
+      <figure style="--rotate: -3deg;">
+        <img src="1.jpg" alt="Moment 1">
+        <figcaption>Also had to add Divinity</figcaption>
+      </figure>
+      <figure style="--rotate: 6deg;">
+        <img src="6.jpg" alt="Moment 6">
+        <figcaption>Fav Pic of us <3</figcaption>
+      </figure>
+      <figure style="--rotate: -5deg;">
+        <img src="19.jpg" alt="Moment 19">
+        <figcaption>we're so cool</figcaption>
+      </figure>
+      <figure style="--rotate: 2deg;">
+        <img src="17.jpg" alt="Moment 17">
+        <figcaption>:( it seems</figcaption>
+      </figure>
+      <figure style="--rotate: -4deg;">
+        <img src="8.jpg" alt="Moment 8">
+        <figcaption>2nd Time Glen's</figcaption>
+      </figure>
+      <figure style="--rotate: 7deg;">
+        <img src="20.jpg" alt="Moment 20">
+        <figcaption>YOU LOOK SO CUTE</figcaption>
+      </figure>
+      <figure style="--rotate: -2deg;">
+        <img src="5.jpg" alt="Moment 5">
+        <figcaption>YOU LOOK SO HAPPY</figcaption>
+      </figure>
+      <figure style="--rotate: 3deg;">
+        <img src="2.jpg" alt="Moment 2">
+        <figcaption>Pink💗</figcaption>
+      </figure>
+      <figure style="--rotate: -6deg;">
+        <img src="13.jpg" alt="Moment 13">
+        <figcaption>FIRST DATE YAY</figcaption>
+      </figure>
+      <figure style="--rotate: 5deg;">
+        <img src="9.jpg" alt="Moment 9">
+        <figcaption>Church Street chappar</figcaption>
+      </figure>
+      <figure style="--rotate: -3deg;">
+        <img src="4.jpg" alt="Moment 4">
+        <figcaption>1st time Glen's</figcaption>
+      </figure>
+      <figure style="--rotate: 4deg;">
+        <img src="18.jpg" alt="Moment 18">
+        <figcaption>Pasta Street x Ugly pic <3</figcaption>
+      </figure>
+      <figure style="--rotate: -5deg;">
+        <img src="7.jpg" alt="Moment 7">
+        <figcaption>Tanisha Basani Fav place</figcaption>
+      </figure>
+      <figure style="--rotate: 3deg;">
+        <img src="15.jpg" alt="Moment 15">
+        <figcaption>Nonchalant</figcaption>
+      </figure>
+      <figure style="--rotate: -2deg;">
+        <img src="16.jpg" alt="Moment 16">
+        <figcaption>I love you<33</figcaption>
+      </figure>
+      
     </div>
   </section>
 
   <section id="loveletter">
     <h2>My Love for You</h2>
     <div class="letter">
-      <p>[Your heartfelt letter will go here]</p>
+      <p>My Love <strike>Tanisha</strike> Bangarm,</p>
+      <p>As surreal as this feels, we’ve been dating for 4months now. And as long as it has been, it also feels like, it was yesterday you asked me to teach you math and complaining to me about stupid shit (cuz you don't do that now). </p>
+
+      <p>It feels like yesterday i told you “I’m just doing nice things to you cuz it’s one month anniversary and asked you not to expect anything again until 6th month”, but guess who didn’t stick to their words. And basically here we are. It’s been 4 months of so much fun, so much laughing, so much crying, so much banter,many arguments, so many apologies, so much studying together, so much fucking up together, so much staying up late with each other, so much sleeping together, so much proving to the other what they mean, and so much love in general.</p>
+
+      <p>Till now I’ve spoken a lot of what I have done for you in this relationship, but I often miss out what I have done for myself. Everyday I try to be the best version of myself for you. Not to snap at you like I do with others, and keep you happy regardless of how I feel, and all these things have made me grow so much as a person. You’ve fully girlfriend effected me like that.</p>
+
+
     </div>
   </section>
 
   <section id="bucketlist">
     <h2>Things I Want Us to Do</h2>
     <ul class="bucket-list">
-      <li>Go stargazing together</li>
-      <li>Travel to Japan</li>
-      <li>Adopt a pet</li>
+      <li>Each Other🎀</li>
+      <li>Pump house</li>
+      <li><strike>Full circle</strike></li>
+      <li>High drate</li>
+      <li>Stories</li>
+      <li>Socials</li>
+      <li>Watering hole</li>
+      <li>Torye</li>
+      <li>Levels</li>
+      <li>Hakuna matata</li>
+      <li>Gatsby</li>
+      <li>Palms</li>
+      <li>Little white kitchen</li>
+      <li><strike>Amintiri</strike></li>
+      <li><strike>Roxie</strike></li>
+      <li>Zoey</li>
+      <li>Mykos</li>
+      <li>Airlines</li>
+      <li>Truffles</li>
+      <li>Chinlungs for wings</li>
+      <li><strike>GO TO FUCKING CHURCH STREET CUZ WHY HAVEN'T WE STILL?</strike></li>
+      <li>Conçu??</li>
+      <li>Funsy cafe</li>
+      <li>Guerilla taco</li>
+      <li>Sky jumper</li>
+      <li><strike>Uno date + let her win</strike></li>
+      <li>Zoo/aquarium?</li>
+      <li>Go on a 2 day trip to a nearby city</li>
+      <li>Rent an Airbnb resort for a night</li>
+      <li>Arcade</li>
+      <li>IKEA</li>
+      <li>Escape room (maybe double date)</li>
+      <li>Board room</li>
+      <li>Bowling + let her win 😈</li>
+      <li>Movie date and actually keep it in pants (unpossible)</li>
+      <li>Fair</li>
+      <li>Go Church</li>
+      <li>Go Temple</li>
+      <li>LNT stalls <3</li>
+      <li>Boating/Kayaking</li>
+      <li>Eat the same noodle into a kiss</li>
+      <li>Cook together</li>
+      <li>Rage room (basani household)</li>
+      <li>Go trekking and keep it in your pants</li>
+      <li>Make that reel with her</li>
+      <li>Make a baby together 🎀</li>
     </ul>
   </section>
+  
 
   <section id="timeline">
     <h2>Our Journey Together 🗺️💗</h2>
@@ -230,7 +387,7 @@
         <div class="timeline-images left-images">
           <img src="month0.jpg" alt="Month 0">
         </div>
-        <div class="timeline-label">Month 0 - The Beginning</div>
+        <div class="timeline-label">Month 0</div>
       </div>
       <div class="timeline-step">
         <div class="timeline-images right-images">
